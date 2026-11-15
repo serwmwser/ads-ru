@@ -1,0 +1,16 @@
+services:
+  ads:
+    build: .
+    container_name: ads-ru
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      PORT: "3000"
+    ports:
+      - "127.0.0.1:3100:3000"
+    volumes:
+      - ads_data:/app/backend/data
+
+volumes:
+  ads_data:

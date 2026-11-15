@@ -5,6 +5,7 @@
   var html = document.documentElement;
   var MARKET = cfg.market || html.getAttribute('data-market') || 'ru';
   var API = (cfg.api != null ? cfg.api : html.getAttribute('data-api') || '').replace(/\/+$/, '');
+  if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) API = '';
   var LOCALE = cfg.locale || (MARKET === 'ru' ? 'ru-RU' : 'en-US');
   var CURRENCY = cfg.currency || (MARKET === 'ru' ? 'RUB' : 'USD');
 

@@ -36,8 +36,9 @@
       <a href="{{navPrices}}">Тарифы</a>
     </nav>
     <div class="hdr-act">
-      <button class="icon-btn" data-search-open aria-label="Поиск города">&#128269;<kbd>Ctrl K</kbd></button>
+      <button class="icon-btn" data-search-open aria-label="Поиск города">&#128269;<span>Поиск</span></button>
       <button class="icon-btn" data-theme-toggle aria-label="Переключить тему">&#9790;</button>
+      <a class="btn" data-auth-link href="{{base}}/profile/">Войти</a>
       <a class="btn btn-primary" href="#board">Разместить</a>
       <button class="icon-btn burger" data-nav-toggle aria-expanded="false" aria-label="Меню">&#9776;</button>
     </div>
@@ -48,6 +49,7 @@
     <a href="{{navHow}}">Как это работает</a><a href="{{navPrices}}">Тарифы</a><a href="{{legalRules}}">Правила сервиса</a>
   </div>
 </header>
+<script>try{if(localStorage.getItem('ads.token.v1')){var a=document.querySelector('[data-auth-link]');if(a)a.textContent='Профиль';}}catch(e){}</script>
 <main id="main">
   {{hero}}
   <div class="wrap">
